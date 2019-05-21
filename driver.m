@@ -12,7 +12,7 @@ function driver(input_directory, output_directory)
     end
 
     % Load model.
-    model = sepsis_rusboost(1);
+    model = rus_model;
 
     % Iterate over files.
     num_files = length(files);
