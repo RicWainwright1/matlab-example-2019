@@ -2,7 +2,7 @@ clear
 clc
 
 % load the data
-sepsis = load('/home/alex/Desktop/ric/cic_2019/processed_training_data.csv');
+sepsis = load('C:/Users/lilwa/Desktop/Matlab_Sepsis/cic_2019/processed_training_data_set_big_processed.csv');
 Y = sepsis(:,end);
 sepsis(:,end) = [];
 
