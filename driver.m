@@ -7,12 +7,12 @@ function driver(input_directory, output_directory)
         end
     end
 
-    if ~exist(output_directory, 'dir')
+    if ~exist(output_directory,'dir')
         mkdir(output_directory)
     end
 
     % Load model.
-    model = rus_model;
+    model = load_sepsis_model();
 
     % Iterate over files.
     num_files = length(files);

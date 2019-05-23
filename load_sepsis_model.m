@@ -1,3 +1,3 @@
 function model = load_sepsis_model()
-    model = [];
+    model = 'rus_model';
 end
