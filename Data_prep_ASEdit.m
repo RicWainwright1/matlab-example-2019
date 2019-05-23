@@ -1,5 +1,5 @@
 % specify the folder where the files live
-myFolder = './training_data/';
+myFolder = 'C:\Users\lilwa\Desktop\Matlab_Sepsis\cic_2019\training_set_big\training_setB';
 
 % get a list of all files in the folder with the desired file name pattern
 filePattern = fullfile(myFolder, '*.psv');
@@ -7,7 +7,6 @@ theFiles = dir(filePattern);
 
 % iterate over all the files
 for k = 1 : length(theFiles)
-    
     % get the file name
     baseFileName = theFiles(k).name;
     fullFileName = fullfile(myFolder, baseFileName);
@@ -27,5 +26,6 @@ for k = 1 : length(theFiles)
     sepsis_final = fillmissing(processed_data, 'linear');
     sepsis1 = fillmissing(sepsis_final, 'previous');
     sepsis2 = fillmissing(sepsis1, 'next');
-    
+    save('data.csv', 'sepsis2', '-ASCII','-append');
+     
 end
